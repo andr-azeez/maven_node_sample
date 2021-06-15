@@ -1,0 +1,26 @@
+insert  into members (memberid, membername, email, phone, walletbalance, passkey) values
+(103,'Carine Schmitt','carrie@abc.com','872919191',21000.00,'carrie123'),
+(112,'Jean King','jking@xyz.com','7025551838', 71800.00, 'king123'),
+(114,'Peter Ferguson','petef@xyz.com','9520034555', 72300.00, 'pete123'),
+(119,'Janine Labrune','janie@abc.com','4067118555',48200.00,'janie123'),
+(124,'Susan Nelson','susan@bcd.co.in','4155551450', 21050.00, 'susan123'),
+(128,'Roland Keitel','roland.k@xyz.com','696905551',59700.00, 'rk@123'),
+(129,'Julie Murphy','julie.murph@bcd.co.in','650555578',64600.00, 'julie123'),
+(131,'Mary Lee','lee.m@abc.com', '2125557818', 114900.00, 'lee123');
+
+select * from members;
+
+insert  into employees(employeeid,employeeName, phone, email, passkey) values 
+(1002,'Diane Murphy', '384579292', 'dmurphy@classicresorts.com','diane123'),
+(1056,'Mary Patterson','46112424','mpatterson@classicresorts.com','mary123'),
+(1076,'Jeff Firrelli','927323423','jfirrelli@classicresorts.com','jeff123'),
+(1088,'William Patterson','487124242','wpatterson@classicresorts.com','wpat123'),
+(1102,'Gerard Bondur','540824242','gbondur@classicresorts.com','gb123'),
+(1143,'Anthony Bow','5428224234','abow@classicresorts.com','tony123'),
+(1165,'Leslie Jennings','32934241','ljennings@classicresorts.com','leslie123'),
+(1166,'Larry Thompson','42323065','lthompson@classicresorts.com','larry123'),
+(1188,'Andrea Knowlings','2342342173','aknowlings@classicresorts.com','andy123'),
+(1216,'Steve Mayors','445353334','smayors@classicresorts.com','steve123');
+
+-- to display all the data
+select * from employees;

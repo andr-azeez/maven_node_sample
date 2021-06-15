@@ -1,0 +1,77 @@
+<nav id="yourNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" style="width: 32%; margin-left: -24%;
+      margin-top: -8%;">
+    </a>
+    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#yourNavbarContent" aria-controls="yourNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="yourNavbarContent">
+      <ul class="navbar-nav ml-auto" style="margin: 2%;">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="loadHome()">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">My Account</a>
+          <ul class="drop-menu">
+            <li><a (click)="showDetails()">Profile</a></li>
+            <li><a (click)="changePassword()">Change Password</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"(click)="showAllBookings()">All Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showCurrentBookings()">Today's Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="bookService()">Book a Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showFeedback()">Feedback & Queries</a>
+        </li>
+      </ul>
+    </div>
+    <div id="exit">
+      <a class="nav-link"><i class="glyphicon glyphicon-log-out"></i> Sign Out</a>
+    </div>
+  </div>
+</nav>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="header-content">SERVICE DETAILS</h2>
+  </div>
+  <div class="panel-body">
+    <div class="col-lg-3 col-md-2"></div>
+    <div *ngIf="am">
+      <table class="t-container">
+        <tr>
+          <td class="td-1" style="padding-left: 2%;">#</td>
+          <td class="td" style="padding-left: 4%;">{{am.amenityId}}</td>
+        </tr>
+        <tr>
+          <td class="td-1" style="padding-left: 2%;">Description:</td>
+          <td class="td" style="padding-left: 4%;">{{am.amenityName}}</td>
+        </tr>
+        <tr>
+          <td class="td-1" style="padding-left: 2%;">Price:</td>
+          <td class="td" style="padding-left: 4%;">{{am.price}}</td>
+        </tr>
+        <tr>
+          <td class="td-1" style="padding-left: 2%;">Facilitator:</td>
+          <td class="td" style="padding-left: 4%;">{{e.employeeName}}</td>
+        </tr>
+        <tr>
+          <td class="td-1" style="padding-left: 2%;">Category:</td>
+          <td class="td" style="padding-left: 4%;">{{am.amenityCategory}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-lg-3 col-md-2"></div>
+  </div>
+</div>

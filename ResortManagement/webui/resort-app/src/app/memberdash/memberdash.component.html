@@ -1,0 +1,73 @@
+<nav id="yourNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" style="width: 32%; margin-left: -24%;
+      margin-top: -8%;">
+    </a>
+    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#yourNavbarContent" aria-controls="yourNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="yourNavbarContent">
+      <ul class="navbar-nav ml-auto" style="margin: 2%;">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="loadHome()">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">My Account</a>
+          <ul class="drop-menu">
+            <li><a (click)="showDetails()">Profile</a></li>
+            <li><a (click)="changePassword()">Change Password</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"(click)="showAllBookings()">All Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showCurrentBookings()">Today's Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Book a Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showFeedback()">Feedback & Queries</a>
+        </li>
+      </ul>
+    </div>
+    <div id="exit">
+      <a class="nav-link"><i class="glyphicon glyphicon-log-out"></i> Sign Out</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper">
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <table class="table table-striped">
+        <caption>CATEGORY: {{amenity}}</caption>
+        <thead>
+          <tr id="head-row">
+            <th>ID</th>
+            <th>DESCRIPTION</th>
+            <th>PRICE</th>
+            <th style="padding-left: 5%;">ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let am of amList'>
+            <td>{{am.amenityId}}</td>
+            <td>{{am.amenityName}}</td>
+            <td>{{am.price}}</td>
+            <td>
+              <span style="margin-left: 1%;"><button class="btn btn-warning" (click)="showService(am.amenityId)">Details</button></span>
+              <span style="margin-left: 1%;"><button class="btn btn-warning" (click)="book(am.amenityId)">Add to Cart</button></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: black;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  list-style: none;
+  border-bottom: 1px solid #9f8df8;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.wrapper .sidebar ul li a{
+  color:cornflowerblue;
+  display: block;
+  font-size: large;
+}
+
+.wrapper .sidebar ul li a .space{
+  width: 35px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #010102;
+}
+
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+
+.panel {
+  margin-left: 25%;
+  width: 55%;
+  margin-top: -1%;
+  margin-right: 9%;
+}
+
+
+
+.header-content {
+  margin-left: 7%;
+  width: fit-content;
+  margin-top: 15px;
+}
+
+.table {
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.align-right {
+  position: absolute;
+  right: 32%;
+  font-size: large;
+  margin-top: 1%;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6{
+  width: 50%;
+  flex: 0 0 auto;
+}
+
+.text-white{
+  color: #fff;
+}
+
+.company-details{
+  float: right;
+  text-align: right;
+}
+
+.body-section{
+  padding: 16px;
+  border: 1px solid gray;
+  padding-bottom: 5px;
+}
+
+.heading{
+  font-size: 20px;
+  margin-bottom: 8px;
+  margin-top: 1%;
+}
+
+.sub-heading{
+  color: #262626;
+  margin-bottom: 05px;
+}
+
+table{
+  background-color: #fff;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead tr{
+  border: 1px solid #111;
+  background-color: #f2f2f2;
+}
+
+table td {
+  vertical-align: middle !important;
+  text-align: center;
+  padding-top: 08px;
+  padding-bottom: 08px;
+}
+
+table th {
+  padding-top: 08px;
+  padding-left: 6%;
+  padding-bottom: 08px;
+}
+
+.table-bordered{
+  box-shadow: 0px 0px 5px 0.5px gray;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #dee2e6;
+}
+
+.text-right{
+  padding-left: 62%;
+}
+
+.w-20{
+  width: 20%;
+}
+
+.float-right{
+  float: right;
+}

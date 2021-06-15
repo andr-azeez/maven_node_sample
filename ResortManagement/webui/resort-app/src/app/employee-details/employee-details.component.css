@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+.panel {
+  margin-left: 25%;
+  width: 55%;
+  margin-top: 1%;
+  margin-right: 9%;
+}
+
+.t-container{
+  width: 80%;
+  min-height: fit-content;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  font-size: 19px;
+  background-color:whitesmoke;
+  border-radius: 27px;
+  overflow: hidden;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  margin-left: 9%;
+  margin-top: 1%;
+  margin-right: 9%;
+  margin-bottom: 1.5%;
+}
+
+.td{
+  border: 2px solid #babec2;
+  font-size: x-large;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80%;
+  color:black;
+  overflow-wrap: break-word;
+}
+
+.td-1{
+  border: 2px solid #babec2;
+  font-size: x-large;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  font-weight: bold;
+  cursor: pointer;
+  width: 25%;
+  color:black;
+  overflow-wrap: break-word;
+}
+
+.header-content {
+  margin-left: 7%;
+  width: fit-content;
+  margin-top: 15px;
+}
+
+.table {
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.align-right {
+  position: absolute;
+  right: 32%;
+  font-size: large;
+  margin-top: 1%;
+}
+
+.hhidden {
+  display: none;
+}
+

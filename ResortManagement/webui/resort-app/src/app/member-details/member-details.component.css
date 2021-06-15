@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  /* height: 100%; */
+  background: black;
+  padding: 30px 0px;
+  position: absolute;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  list-style: none;
+  border-bottom: 1px solid #9f8df8;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.wrapper .sidebar ul li a{
+  color:cornflowerblue;
+  display: block;
+  font-size: large;
+}
+
+.wrapper .sidebar ul li a .space{
+  width: 35px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #010102;
+}
+
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+
+.panel {
+  margin-left: 25%;
+  width: 55%;
+  margin-top: -1%;
+  margin-right: 9%;
+  margin-bottom: 0%;
+}
+
+.t-container{
+  width: 80%;
+  min-height: fit-content;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  font-size: 19px;
+  background-color:whitesmoke;
+  border-radius: 27px;
+  overflow: hidden;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  margin-left: 9%;
+  margin-top: 1%;
+  margin-right: 9%;
+  margin-bottom: 1.5%;
+}
+
+.td{
+  border: 2px solid #babec2;
+  font-size: large;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80%;
+  color:black;
+  overflow-wrap: break-word;
+}
+
+.td-1{
+  border: 2px solid #babec2;
+  font-size: large;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  font-weight: bold;
+  cursor: pointer;
+  width: 25%;
+  color:black;
+  overflow-wrap: break-word;
+}
+
+.header-content {
+  margin-left: 7%;
+  width: fit-content;
+  margin-top: 15px;
+}
+
+.table {
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.align-right {
+  position: absolute;
+  right: 32%;
+  font-size: large;
+  margin-top: 1%;
+}
+
+.hhidden {
+  display: none;
+}
+
+.panel-heading {
+  padding: 1px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}

@@ -1,0 +1,114 @@
+<nav id="yourNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" style="width: 32%; margin-left: -24%;
+      margin-top: -8%;">
+    </a>
+    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#yourNavbarContent" aria-controls="yourNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="yourNavbarContent">
+      <ul class="navbar-nav ml-auto" style="margin: 2%;">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="loadHome()">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">My Account</a>
+          <ul class="drop-menu">
+            <li><a (click)="showDetails()">Profile</a></li>
+            <li><a (click)="changePassword()">Change Password</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">All Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Today's Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Book a Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Feedback & Queries</a>
+        </li>
+      </ul>
+    </div>
+    <div id="exit">
+      <a class="nav-link"><i class="glyphicon glyphicon-log-out"></i> Sign Out</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1 class="header-content">BOOKING DETAILS</h1>
+  </div>
+  <div class="panel-body">
+      <form name="myForm" #myForm="ngForm" class="form-horizontal" (ngSubmit)="bookService()">
+        <div class="form-row">
+          <div class="form-group col div-content">
+            <label for="facility" class="control-label col-sm-9 label-size">FACILITY: </label>
+            <div class="col-lg-12">
+              <input id="facility" name="facility" class="form-control" [value]="am.amenityName" disabled
+              style="width: 251%; margin-left: 7%;">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col div-content">
+            <label for="desc" class="control-label col-sm-9 label-size">CATEGORY: </label>
+            <div class="col-lg-12">
+              <input id="desc" name="desc" class="form-control" [value]="am.amenityCategory" disabled
+              style="width: 238%;">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col div-content">
+            <label for="price" class="control-label col-sm-9 label-size">Price: </label>
+            <div class="col-lg-12">
+              <input id="price" name="price" class="form-control" [value]="am.price" disabled
+              style="width: 288%; margin-left: 17%;">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col div-content">
+            <label for="end" class="control-label col-sm-9 label-size">Facilitator: </label>
+            <div class="col-lg-12">
+              <input id="empname" name="empname" class="form-control" [value]="emp.employeeName" disabled
+              style="width: 248%; margin-left: 3%;">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col div-content">
+            <label for="qty" class="control-label col-sm-9 label-size">Quantity: </label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" id="qty" name="qty" [(ngModel)]="quantity" #qty="ngModel"
+              style="width: 299%; margin-left: -8%;">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col div-content">
+            <label for="tot" class="control-label col-sm-9 label-size">Total Amount: </label>
+            <div class="col-lg-12">
+              <input id="tot" name="tot" class="form-control" [value]="(+am.price) * quantity" disabled
+              style="width: 226%; margin-left: -4%;">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col">
+            <button class="btn btn-info btnSubmit col-md-5" type="submit" style="margin-left: 7%;">Confirm and Book</button>
+            <button class="btn btn-danger btnCancel col-md-5" (click)="myForm.reset()">Cancel</button>
+          </div>
+        </div>
+      </form>
+  </div>
+</div>

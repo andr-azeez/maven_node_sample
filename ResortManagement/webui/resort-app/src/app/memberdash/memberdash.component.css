@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: rgb(44, 43, 43);
+  text-align: left;
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+th {
+  font-size: large;
+  padding-left: 4%;
+}
+
+td {
+  font-size: 1.15em;
+}
+
+#cat {
+  width: 98%;
+  margin-left: 1%;
+}
+
+.table {
+  width: 93%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-left: 3%;
+}
+
+.panel {
+  margin-left: 5%;
+  margin-right: 5%;
+}

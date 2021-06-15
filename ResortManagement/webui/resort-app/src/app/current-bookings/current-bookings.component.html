@@ -1,0 +1,84 @@
+<nav id="yourNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" style="width: 32%; margin-left: -24%;
+      margin-top: -8%;">
+    </a>
+    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#yourNavbarContent" aria-controls="yourNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="yourNavbarContent">
+      <ul class="navbar-nav ml-auto" style="margin: 2%;">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="loadHome()">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">My Account</a>
+          <ul class="drop-menu">
+            <li><a (click)="showDetails()">Profile</a></li>
+            <li><a (click)="changePassword()">Change Password</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"(click)="showAllBookings()">All Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="loadData()">Today's Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Book a Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"(click)="showFeedback()">Feedback & Queries</a>
+        </li>
+      </ul>
+    </div>
+    <div id="exit">
+      <a class="nav-link"><i class="glyphicon glyphicon-log-out"></i> Sign Out</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper">
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <table class="table table-striped">
+        <caption>BOOKING DATE: {{bDate}}</caption>
+        <thead>
+          <tr id="head-row">
+            <th>ID</th>
+            <th>FACILITY</th>
+            <!-- <th></th> -->
+            <th>QUANTITY</th>
+            <th>AMOUNT</th>
+            <th>STATUS</th>
+            <th style="padding-left: 7%;">ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let b of list'>
+            <td>{{b.bookingId}}</td>
+            <td>{{am1.amenityName}}</td>
+            <td class="tooltip-example td" style="display: inline-flex;">
+              <div tooltip="Click on the quantity to edit" placement="top" delay="200">
+                <i class="glyphicon glyphicon-info-sign"></i>
+              </div>
+              <span style="margin-left: 42%">
+                <app-inline-edit [(ngModel)]="b.quantity" type="text" name="qty" #qty="ngModel"></app-inline-edit>
+              </span>
+            </td>
+            <td>{{b.totalAmt}}</td>
+            <td>{{b.status}}</td>
+            <td>
+              <span style="margin-left: 1%;"><button class="btn btn-warning" (click)="editBooking(b.bookingId, b.quantity)">Edit Booking</button></span>
+              <span style="margin-left: 1%;"><button class="btn btn-danger" (click)="openDialog(b.bookingId)">Cancel Booking</button></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

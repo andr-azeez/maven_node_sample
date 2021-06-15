@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+.form-control::placeholder {
+  font-size: 15px;
+  color: #aaa;
+  font-style: italic;
+}
+
+.panel {
+  margin-left: 7%;
+  width: 85%;
+  margin-top: 1%;
+}
+
+#head-row {
+  background-color: cornflowerblue;
+  color: ghostwhite;
+   font-size: 15px;
+}
+
+.header-content {
+  margin-left: 1%;
+  width: fit-content;
+  margin-top: 15px;
+}
+
+.addBtn {
+  width: 12%;
+  font-size: 18px;
+  margin-bottom: 1%;
+}

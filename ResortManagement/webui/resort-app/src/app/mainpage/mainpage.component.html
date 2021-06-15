@@ -1,0 +1,102 @@
+<nav id="yourNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" style="width: 32%; margin-left: -24%;
+      margin-top: -7%;">
+    </a>
+    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#yourNavbarContent" aria-controls="yourNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="yourNavbarContent">
+      <ul class="navbar-nav ml-auto" style="margin: 2%;">
+        <li class="nav-item welcome">
+          WELCOME TO BLACK STONE RESORTS
+        </li>
+        <li class="nav-item" style="margin-top: 1%;">
+          <a class="nav-link feed" (click)="showFeedback()">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="yourHeader" class="jumbotron jumbotron-fluid">
+  <div class="your-header-content container-fluid text-center text-white">
+    <div class="row">
+      <div class="your-header-text col">
+        <h1 class="display-3">BLACK STONE RESORTS</h1>
+        <p class="lead pb-4">Your Home Away from Home! BE Yourself, LIVE Yourself!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="your-header-button col">
+          <a class="your-btn-primary btn btn-info btn-lg rounded-pill" role="button" (click)="goToEmployeeLogin()">Employees Login Here</a>
+      </div>
+  </div>
+  </div>
+</header>
+
+<section id="yourServices" class="container">
+   <h2 class="display-4 text-center mt-5 mb-3">Our Services - A Glimpse</h2>
+   <div class="row text-center">
+      <div class="col-md-4 mb-4">
+         <div class="card h-100">
+            <img class="card-img-top" src="../../assets/nav-1.jpg" alt="pool">
+            <div class="card-body">
+               <h4 class="card-title">Swimming Pool</h4>
+               <p class="card-text">We Provide Clean Fresh Water in our Swimming Pool.</p>
+            </div>
+            <div class="card-footer py-4">
+                <a class="your-btn-primary-outer btn btn-info rounded-pill" id="pool" (click)="goToMemberLogin($event)">
+                  Book your Slot
+                </a>
+            </div>
+         </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+         <div class="card h-100">
+            <img class="card-img-top" src="../../assets/nav-2.jpg" alt="spa">
+            <div class="card-body">
+               <h4 class="card-title">SPA and Sauna Service</h4>
+               <p class="card-text">Nothing better than a Relaxing and Refreshing Day at our SPA</p>
+            </div>
+            <div class="card-footer py-4">
+                <a class="your-btn-primary-outer btn btn-info rounded-pill" id="spa" (click)="goToMemberLogin($event)">
+                  Book Your Day
+                </a>
+            </div>
+         </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+         <div class="card h-100">
+            <img class="card-img-top" src="../../assets/nav-3.jpg" alt="food">
+            <div class="card-body">
+               <h4 class="card-title">Restaurant</h4>
+               <p class="card-text">Excellent food prepared by our world class chefs to tempt your appetite</p>
+            </div>
+            <div class="card-footer py-4">
+                <a class="your-btn-primary-outer btn btn-info rounded-pill" id="dining" (click)="goToMemberLogin($event)">
+                  Book Your Table
+                </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section id="yourContact" class="container-fluid text-center py-4 mt-4" id="contact">
+    <div class="row">
+        <div class="your-contact-text col">
+            <h2 class="display-4 pb-4 my-4">Get in Touch For Our Other Services</h2>
+            <p class="lead pb-3">Your Time in Paradise Awaits You.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="your-contact-button col">
+            <a class="your-btn-primary btn btn-primary btn-lg rounded-pill mb-4" role="button" id="rooms" (click)="goToMemberLogin($event)">Book Your Stay With Us NOW!</a>
+        </div>
+    </div>
+</section>

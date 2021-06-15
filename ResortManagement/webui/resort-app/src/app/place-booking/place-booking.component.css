@@ -1,0 +1,56 @@
+#qty {
+  width: 134%;
+}
+
+.panel {
+  margin-left: 25%;
+  width: 55%;
+  margin-top: 1%;
+  margin-right: 9%;
+}
+
+.panel-heading {
+  padding: 1px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.header-content {
+  margin-left: 7%;
+  width: fit-content;
+  margin-top: 15px;
+}
+
+.form-control {
+  border-radius: 1rem;
+  font-size: 18px;
+}
+
+.label-size {
+  font-size: 22px;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: left;
+}
+
+.btnSubmit {
+  border-radius: 1rem;
+  padding-right: 17%;
+  margin-right: 2%;
+  margin-left: 2%;
+  padding-left: 13%;
+  font-size: 16px;
+}
+
+.btnCancel {
+  /* border-radius: 1rem; */
+  margin-left: 2%;
+  padding-right: 13%;
+  padding-left: 12%;
+  font-size: 16px;
+}
+
+.div-content {
+  display: inline-flex;
+}

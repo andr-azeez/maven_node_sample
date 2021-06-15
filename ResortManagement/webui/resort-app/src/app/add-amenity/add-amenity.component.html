@@ -1,0 +1,95 @@
+<nav id="yourNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" style="width: 32%; margin-left: -24%;
+      margin-top: -8%;">
+    </a>
+    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#yourNavbarContent" aria-controls="yourNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="yourNavbarContent">
+      <ul class="navbar-nav ml-auto" style="margin: 2%;">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="loadHome()">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">My Account</a>
+          <ul class="drop-menu">
+            <li><a (click)="showDetails()">Profile</a></li>
+            <li><a (click)="changePassword()">Change Password</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showAllBookings()">All Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showCurrentPending()">Today's Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">New Additions</a>
+          <ul class="drop-down">
+            <li><a (click)="addService()">New Service</a></li>
+            <li><a (click)="addCoupon()">New Coupon</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Feedback & Queries</a>
+        </li>
+      </ul>
+    </div>
+    <div id="exit">
+      <a class="nav-link"><i class="glyphicon glyphicon-log-out"></i> Log Out</a>
+    </div>
+  </div>
+</nav>
+
+<div class="panel panel-primary" style="margin-left: 19%;">
+  <div class="panel-heading">
+    <h2 class="header-content">NEW PRODUCT DETAILS ADDED BY: {{e.employeeName}}</h2>
+  </div>
+  <div class="panel-body">
+    <form name="myForm" #myForm="ngForm" class="form-horizontal">
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="desc" class="control-label col-sm-9 label-size">SERVICE: </label>
+          <div class="col-lg-12">
+            <input id="desc" name="desc" class="form-control" [(ngModel)]="name" #desc="ngModel" required>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="price" class="control-label col-sm-9 label-size">PRICE: </label>
+          <div class="col-lg-12">
+            <input id="price" name="price" class="form-control" [(ngModel)]="unitprice" #price="ngModel" required>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="category" class="control-label col-sm-9 label-size">CATEGORY: </label>
+          <div class="col-sm-9">
+            <select class="form-control" id="iCat" name="category" [(ngModel)]="cat" #category="ngModel" required>
+              <option value="SPA">SPA</option>
+              <option value="POOL">POOL</option>
+              <option value="ROOMS">ROOMS</option>
+              <option value="RESTUARANT">RESTUARANT</option>
+              <option value="HALL">HALL</option>
+              <option value="HOUSEKEEPING">HOUSEKEEPING</option>
+              <option value="TRAVELDESK">TRAVEL DESK</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col">
+          <button class="btn btn-info btnSubmit col-md-5" style="margin-left: 4%; margin-right: 8%;" (click)="addService()">Add Service</button>
+          <button class="btn btn-danger btnCancel col-md-5" (click)="myForm.reset()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
